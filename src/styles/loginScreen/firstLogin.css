@@ -1,0 +1,24 @@
+
+
+main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--teal-600);
+}
+
+
+main form button.btn[type="submit"]{
+    color: white;
+    background-color: var(--teal-800) !important;
+    font-weight: 400;
+}
+main form button.btn[type="button"]{
+    color: #343434;
+    background-color: var(--teal-200);
+
+    font-weight: 400;
+}
+
