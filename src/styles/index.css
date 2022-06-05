@@ -1,0 +1,48 @@
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main section{
+    flex-basis: 50%;
+    height: 100%;
+}
+
+main section:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    flex-basis: 60%;
+    background-color:var(--teal-600);
+}
+
+/* change default color bs */
+main section form button.btn{
+    color: white;
+    background-color: var(--teal-700) !important;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 760px) {
+    main section:nth-child(2){
+        position: absolute;
+        display: none;
+        visibility: 0;
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+        margin: -1;
+        overflow: hidden;
+        white-space: nowrap;
+        border-width: 0;
+        clip-path: rect(0,0,0,0);
+    }
+
+    main section:nth-child(1){
+        flex-basis: 100%;
+    }
+}
