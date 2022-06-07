@@ -1,0 +1,4 @@
+.nav-pills > li.nav-item > a.active, .nav-pills > li.nav-item > a:hover {
+    background-color: var(--teal-600);
+    border: 1px solid #353535;
+}
