@@ -49,17 +49,38 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                                 <li><a class="dropdown-item" href="#">Configurações</a></li>
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" >Perfil</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitModal">Sair</a></li>
                             </ul>
                         </div>
+                      
                     </div>
             <div class="col py-3">
                 Conteudo aqui!
             </div>
+
+            <!-- MODAL EXIT-->
+            <div class="modal" tabindex="-1" id="exitModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">MedCheck</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Realmente deseja sair?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="location.href='../../index.html'">Sair</button>
+                      <button type="button" class="btn btn-primary">Cancelar</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              
         </div>
     </main>
     
