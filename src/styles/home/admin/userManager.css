@@ -1,0 +1,22 @@
+
+
+table#usersTable tr {
+    cursor: pointer;
+
+}
+
+.page-functions{
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+section.top-functions{
+    
+    height: 30vh;
+    background-color: var(--teal-400);
+    margin-bottom: 2em;
+}
+
+section.bottom-functions{
+    padding: 1em;
+}
