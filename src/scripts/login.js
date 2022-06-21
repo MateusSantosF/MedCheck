@@ -6,6 +6,12 @@ let database = [
         permission: "admin"
 
     },
+    {
+        registration: "1234",
+        password: "1234",
+        permission: "employee"
+
+    },
 
 ]
 
