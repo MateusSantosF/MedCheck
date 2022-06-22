@@ -26,7 +26,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>MedCheck - Acesso</title>
 </head>
-<body onload="ListAllUsers(),getCurrentUser() ">
+<body onload="ListAllPatients(),getCurrentUser() ">
 
     <header>
         <h1 class="sr-only">Inicio</h1>
@@ -44,13 +44,13 @@
                             </li>
                            
                             <li class="nav-item">
-                                <a class="nav-link  fs-5 text-white" href="./patientManager.html">Pacientes</a>
+                                <a class="nav-link active fs-5 text-white" href="#">Pacientes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-5  text-white" href="#">Protocolos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active fs-5 text-white" aria-current="page" href="#">Gerenciar Usuários</a>
+                                <a class="nav-link  fs-5 text-white" aria-current="page" href="./userManager.html">Gerenciar Usuários</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link fs-5  text-white" href="#">Opção 4</a>
@@ -77,13 +77,10 @@
 
 
                 <section class="top-functions">
-                        <h1 class="ps-5 pt-3 text-white">Gerenciamento de Usuários</h1>
-
-                      
+                        <h1 class="ps-5 pt-3 text-white">Gerenciamento de Pacientes</h1>
                 </section>
-
                 <section class="bottom-functions">
-
+                    
                     <div class="d-flex flex-row w-100 justify-content-between align-items-center">
                        
                         <div class="flex-column">
@@ -94,13 +91,10 @@
                                 <button type="button" class="btn btn-primary">Buscar</button>   
                               </div> 
                         </div>
-                
-                       <div>
-                            <button type="button" class="btn btn-success mt-4" data-bs-toggle="modal" 
-                            data-bs-target="#signup-modal" >Novo Usuário</button>
-                        </div>
+             
                    </div>
-                 
+                       
+
                     <div class="container overflow-scroll" style="max-height:500px;">
                         <table class="table table-striped table-hover" id="usersTable">
                             <thead> 
@@ -109,8 +103,9 @@
                                     <td>Nome</td>
                                     <td>Sobrenome</td>
                                     <td>Email</td>
-                                    <td>Turno</td>
-                                    <td>Equipe</td>
+                                    <td>Idade</td>
+                                    <td>Plano de Saúde</td>
+                                    <td>Número Carteirinha</td>
                                     <td>Ações</td>
                                 </tr>
                             </thead>
@@ -229,7 +224,7 @@
        
     </main>
   
-    <script src="../../../src/scripts/userController.js">
+    <script src="../../../src/scripts/patientController.js">
 
 
     </script>

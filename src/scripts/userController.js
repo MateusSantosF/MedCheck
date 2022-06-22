@@ -25,8 +25,14 @@ let users = [
         email: "jonas.dev@gmail.com",
         rotation: "diurno",
         team: "Equipe Y"
+    },{
+        register: "12345",
+        firstName: "Mateus",
+        lastName: "Santos",
+        email: "mateusferreira.dev@gmail.com",
+        rotation: "diurno",
+        team: "Equipe X"
     }
-
 ]
 
 function ListAllUsers(){
@@ -57,11 +63,12 @@ function ListAllUsers(){
         team.innerHTML = user.team
 
         var buttons = row.insertCell();
-        buttons.innerHTML = "<div class='btn-group' role='group' aria-label='Basic example'> "+
+        buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
         "<button type='button' class='btn btn-primary'>Editar</button>"+
         "<button type='button' class='btn btn-danger'>Excluir</button>"+
         "</div>"
 
+      
     })
 
 
