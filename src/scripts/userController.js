@@ -3,7 +3,7 @@
 let users = [
 
     {
-        register: "12345",
+        register: "U-12345",
         firstName: "Mateus",
         lastName: "Santos",
         email: "mateusferreira.dev@gmail.com",
@@ -11,7 +11,7 @@ let users = [
         team: "Equipe X"
     },
     {
-        register: "23423",
+        register: "U-23423",
         firstName: "Joazinho",
         lastName: "Pereira",
         email: "jaozinho.dev@gmail.com",
@@ -19,14 +19,14 @@ let users = [
         team: "Equipe Y"
     },
     {
-        register: "12565",
+        register: "U-12565",
         firstName: "Jonas",
         lastName: "Ferreira",
         email: "jonas.dev@gmail.com",
         rotation: "diurno",
         team: "Equipe Y"
     },{
-        register: "12345",
+        register: "U-12345",
         firstName: "Mateus",
         lastName: "Santos",
         email: "mateusferreira.dev@gmail.com",
