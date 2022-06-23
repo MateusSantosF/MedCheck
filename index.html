@@ -20,7 +20,9 @@
     <header>
         <h1 class="sr-only">Acesso de usuário</h1>
     </header>
+    <div id="liveAlertPlaceholder"></div>
     <main>
+       
         <section>
             <h2 class="text-center"><span>MEDC</span>heck</h2>
             <form class="col-6" action="javascript:validateUser()" id="formLogin">            
@@ -33,11 +35,11 @@
                   <label for="floatingPassword">Senha</label>
                 </div>
               
-                <button class="w-100 btn btn-lg btn " type="submit">Logar</button>
+                <button class="w-100 btn btn-lg btn " type="submit" id="liveAlertBtn">Logar</button>
                 <p class="mt-5 mb-3" style="color: white;">MedCheck &copy; 2022</p>
               </form>
         </section>
-
+        
         <section>
             <img src="./src/images/background2.svg" alt="">
         </section>
