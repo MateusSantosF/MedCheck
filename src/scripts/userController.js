@@ -1,6 +1,6 @@
 
 
-let users = [
+const users = [
 
     {
         register: "U-12345",
@@ -35,11 +35,15 @@ let users = [
     }
 ]
 
+
+localStorage.setItem("users", JSON.stringify(users))
+
 function ListAllUsers(){
 
     var table = document.getElementById('usersTable');
 
-
+    var users = JSON.parse(localStorage.getItem("users"))
+    
     users.forEach( user => {
         var row = table.insertRow();
         row.classList.toggle('table-light')

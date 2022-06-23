@@ -1,4 +1,5 @@
-let patients = [
+
+const patients = [
 
     {
         identifier: "P-32445",
@@ -71,10 +72,13 @@ let patients = [
     }
 ]
 
+localStorage.setItem("patients", JSON.stringify(patients))
+
 function ListAllPatients(){
 
     var table = document.getElementById('usersTable');
-
+    
+    var patients = JSON.parse(localStorage.getItem('patients'))
 
     patients.forEach( patient => {
 
@@ -104,19 +108,15 @@ function ListAllPatients(){
         var cardNumber = row.insertCell();
         cardNumber.innerHTML = patient.cardNumber
 
-
-
         var buttons = row.insertCell();
         buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
         "<button type='button' class='btn btn-primary'>Editar</button>"+
         `<button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal' onclick='showDetails("${patient.identifier}")\'"> Detalhes</button>`+
         "<button type='button' class='btn btn-danger'>Excluir</button>"+
         "</div>"
-
       
     })
 
- 
 }
 
 function showDetails(identifier){
