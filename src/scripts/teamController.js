@@ -20,6 +20,12 @@ const teams = [
         schedule: "Manhã",
         tag: "E-UTI-2",
         users: users
+    },
+    {
+        manager:"Everaldo",
+        schedule: "Manhã",
+        tag: "E-NEO-1",
+        users: users
     }
 
 ]

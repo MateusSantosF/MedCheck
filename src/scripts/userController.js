@@ -43,7 +43,7 @@ function ListAllUsers(){
     var table = document.getElementById('usersTable');
 
     var users = JSON.parse(localStorage.getItem("users"))
-    
+
     users.forEach( user => {
         var row = table.insertRow();
         row.classList.toggle('table-light')
@@ -77,3 +77,22 @@ function ListAllUsers(){
 
 
 }
+
+
+function loadTeamsFromLocalStorage(){
+
+    var teams = JSON.parse(localStorage.getItem('teams'))
+    var select = document.getElementById("selectTeams")
+
+    teams.forEach( team => {
+        var option = document.createElement('option')
+
+        option.text = team.tag
+        option.value = team.tag
+        select.appendChild(option)
+
+    })
+
+}
+
+loadTeamsFromLocalStorage()
