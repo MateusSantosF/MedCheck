@@ -154,8 +154,18 @@ const teams = [
 
 ]
 
+var firstLoad = localStorage.getItem('firstLoad');
+console.log(firstLoad)
+if(firstLoad == null){
+    localStorage.setItem("firstLoad", true)
+    firstLoad = true
+    console.log("estrou!!")
+}
 
 
-localStorage.setItem("patients", JSON.stringify(patients))
-localStorage.setItem("users", JSON.stringify(users))
-localStorage.setItem("teams", JSON.stringify(teams));
+if (firstLoad == "true"){
+    localStorage.setItem("patients", JSON.stringify(patients))
+    localStorage.setItem("users", JSON.stringify(users))
+    localStorage.setItem("teams", JSON.stringify(teams));
+    localStorage.setItem('firstLoad', false)
+}
