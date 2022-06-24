@@ -21,27 +21,28 @@
         <h1 class="sr-only">Primeiro Acesso</h1>
     </header>
     <main>
-        <form class="col-4"> 
+        <form class="col-4" action="none"> 
 
             <div class="form-floating mb-4">
-                <input type="password" class="form-control" id="Password" placeholder="Password">
+                <input type="password" class="form-control" id="password" placeholder="Password">
                 <label for="floatingPassword">Nova Senha</label>
             </div>
 
             <div class="form-floating mb-4">
-              <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password">
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
               <label for="floatingConfirmPassword">Confirmar Senha</label>
             </div>
 
             <div class="d-flex flex-row gap-2">
-                <button class="w-100 btn btn-lg" type="button">Cancelar</button>
-                <button class="w-100 btn btn-lg" type="submit">Salvar</button>
+                <button class="w-100 btn btn-lg" type="button" class="btn">Cancelar</button>
+                <button class="w-100 btn btn-lg" type="button" onclick="firstAcessDefinePassword()" id="btnSalvar">Salvar</button>
             </div>
            
           </form>
 
     </main>
- x
+    
+    <script src="../../src/scripts/login.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

@@ -1,43 +1,5 @@
 
 
-const users = [
-
-    {
-        register: "U-12345",
-        firstName: "Mateus",
-        lastName: "Santos",
-        email: "mateusferreira.dev@gmail.com",
-        rotation: "diurno",
-        team: "Equipe X"
-    },
-    {
-        register: "U-23423",
-        firstName: "Joazinho",
-        lastName: "Pereira",
-        email: "jaozinho.dev@gmail.com",
-        rotation: "diurno",
-        team: "Equipe Y"
-    },
-    {
-        register: "U-12565",
-        firstName: "Jonas",
-        lastName: "Ferreira",
-        email: "jonas.dev@gmail.com",
-        rotation: "diurno",
-        team: "Equipe Y"
-    },{
-        register: "U-12345",
-        firstName: "Mateus",
-        lastName: "Santos",
-        email: "mateusferreira.dev@gmail.com",
-        rotation: "diurno",
-        team: "Equipe X"
-    }
-]
-
-
-localStorage.setItem("users", JSON.stringify(users))
-
 function ListAllUsers(){
 
     var table = document.getElementById('usersTable');

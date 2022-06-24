@@ -10,7 +10,7 @@ main{
 }
 
 
-main form button.btn[type="submit"]{
+main form button.btn#btnSalvar{
     color: white;
     background-color: var(--teal-800) !important;
     font-weight: 400;

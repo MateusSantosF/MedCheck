@@ -1,79 +1,4 @@
 
-const patients = [
-
-    {
-        identifier: "P-32445",
-        firstName: "Mateus",
-        lastName: "Santos",
-        email: "mateusferreira.dev@gmail.com",
-        cpf: "50049476866",
-        birthDate: "06/02/2002",
-        age: "22",
-        sex: "masculino",
-        phone: "11965852254",
-        healthPlan: "Amil saúde",
-        cardNumber: "C-56848484",
-        cardValite: "08/08/2028",
-        nation: "Brasil",
-        cep: "08420-040",
-        street: "Dr ribeiro de Andrade",
-        houseNumber: "25",
-        district: "Jd Helena",
-        country: "SP",
-        profission: "Engenheiro",
-        cadastreDate: "02/05/2022",
-        observation: "cara muito legal"
-    },
-    {
-        identifier: "P-92445",
-        firstName: "Lais",
-        lastName: "Barros",
-        email: "lbarros@gmail.com",
-        cpf: "555848785455",
-        birthDate: "08/02/2002",
-        age: "20",
-        sex: "Feminino",
-        phone: "11965554854",
-        healthPlan: "Sul America",
-        cardNumber: "C-54585554",
-        cardValite: "08/08/2030",
-        nation: "Brasil",
-        cep: "08420-040",
-        street: "Ra Dos Andrade",
-        houseNumber: "20",
-        district: "Roseiras",
-        country: "SP",
-        profission: "Desenvolvedora",
-        cadastreDate: "03/05/2022",
-        observation: "ola amigos da rede globo"
-    },
-    {
-        identifier: "P-22445",
-        firstName: "Joao",
-        lastName: "Pedro",
-        email: "joaoP@gmail.com",
-        cpf: "8755486866",
-        birthDate: "10/10/2002",
-        age: "30",
-        sex: "masculino",
-        phone: "11965852254",
-        healthPlan: "Amil saúde",
-        cardNumber: "C-55447745",
-        cardValite: "08/08/2028",
-        nation: "Brasil",
-        cep: "08420-040",
-        street: "Dr ribeiro de Andrade",
-        houseNumber: "25",
-        district: "Jd Helena",
-        country: "SP",
-        profission: "Engenheiro",
-        cadastreDate: "02/05/2022",
-        observation: "nao sei oque colocar"
-    }
-]
-
-localStorage.setItem("patients", JSON.stringify(patients))
-
 function ListAllPatients(){
 
     var table = document.getElementById('usersTable');
@@ -81,8 +6,6 @@ function ListAllPatients(){
     var patients = JSON.parse(localStorage.getItem('patients'))
 
     patients.forEach( patient => {
-
-        localStorage.setItem(patient.identifier, JSON.stringify(patient));
 
         var row = table.insertRow();
         row.classList.toggle('table-light')
@@ -121,7 +44,8 @@ function ListAllPatients(){
 
 function showDetails(identifier){
 
-    const patient = JSON.parse(localStorage.getItem(identifier));
+    const patients = JSON.parse(localStorage.getItem('patients'));
+    const patient = patients.find( p => p.identifier == identifier)
 
     var inputIdentifier = document.getElementById("inputIdentifier");
     var inputCpf = document.getElementById("inputCpf");

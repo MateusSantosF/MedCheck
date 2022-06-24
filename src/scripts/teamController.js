@@ -1,38 +1,4 @@
 
-var users = localStorage.getItem("users")
-
-const teams = [
-
-    {
-        manager:"Lais Barros Nogueira",
-        schedule: "Noite",
-        tag: "E-UTI-1",
-        users: users
-    },
-    {
-        manager:"David Buzzato",
-        schedule: "Tarde",
-        tag: "E-PS-1",
-        users: users
-    },
-    {
-        manager:"Breno Lis Romano",
-        schedule: "Manhã",
-        tag: "E-UTI-2",
-        users: users
-    },
-    {
-        manager:"Everaldo",
-        schedule: "Manhã",
-        tag: "E-NEO-1",
-        users: users
-    }
-
-]
-
-localStorage.setItem("teams", JSON.stringify(teams));
-
-
 function listAllTeams(){
     
     var table = document.getElementById('teamsTable');
@@ -53,8 +19,9 @@ function listAllTeams(){
         schedule.innerHTML = team.schedule
 
         var membersQtd = row.insertCell();
-        var users = JSON.parse(team.users).length
-        membersQtd.innerHTML = users
+        membersQtd.innerHTML = team.members.length
+        
+        
 
         var buttons = row.insertCell();
         buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
@@ -97,10 +64,5 @@ function removeMember(li){
             return;
         }
     } )
-    
-
 }
 
-
-
-console.log(teams[0].users)
