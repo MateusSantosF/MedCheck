@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="../../src/styles/main.css">
+    <link rel="stylesheet" href="../../src/styles/home/home.css">
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,46 @@
         <h1 class="sr-only">Inicio</h1>
     </header>
     <main>
-        <h2>HELLO WORLD</h2>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 min-vh-100" style="background-color: var(--teal-600);">
+                    <a href="#" class="d-flex justify-content-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-3 d-sm-inline text-center p-4">LOGO</span>
+                    </a>
+                        <ul class="nav flex-column nav-pills p-2">
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 text-white" aria-current="page" href="#">Opção 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  fs-5 text-white" href="#">Opção 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5  text-white" href="#">Opção 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs-5  text-white" href="#">Opção 4</a>
+                            </li>
+                        </ul>
+                        <!-- PROFILE -->
+                        <div class="dropdown pb-4 p-4 fixed-bottom">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/MateusSantosF.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1 fs-5">Mateus Santos</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            <div class="col py-3">
+                Conteudo aqui!
+            </div>
+        </div>
     </main>
     
     <!-- JavaScript Bundle with Popper -->
