@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../../src/styles/main.css">
     <link rel="stylesheet" href="../../src/styles/home/home.css">
@@ -44,8 +45,8 @@
                         <!-- PROFILE -->
                         <div class="dropdown pb-4 p-4 fixed-bottom">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://github.com/MateusSantosF.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                                <span class="d-none d-sm-inline mx-1 fs-5">Mateus Santos</span>
+                                <img  id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                                 <li><a class="dropdown-item" href="#">Configurações</a></li>
@@ -83,7 +84,21 @@
               
         </div>
     </main>
+
+        <!--SCRIPT-->        
+        <script >
+        
+            function getCurrentUser(){
+                var user =  JSON.parse(localStorage.getItem("currentUser"))
+                var component = document.getElementById('currentUser');
+      
+                component.innerHTML = user.firstName + " " + user.lastName;
     
+                let image = document.getElementById("profileImage");
+                image.src = user.github;
+            }
+            getCurrentUser()
+        </script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
