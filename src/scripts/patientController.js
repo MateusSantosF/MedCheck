@@ -40,9 +40,16 @@ function ListAllPatients(){
             profission.innerHTML = patient.profission
         }
 
+      
+
         if(currentUser.permission == "employee"){
             var enterData = row.insertCell();
             enterData.innerHTML = patient.cadastreDate
+        }
+
+        if(currentUser.permission == "employee"){
+            var sector = row.insertCell();
+            sector.innerHTML = patient.sector
         }
 
         if(currentUser.permission == "admin"){
