@@ -124,25 +124,96 @@ const teams = [
         manager:"Lais Barros Nogueira",
         schedule: "Noite",
         tag: "E-UTI-1",
-        members: []
+        members: [
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },{
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },{
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+
+        ]
     },
     {
         manager:"David Buzzato",
         schedule: "Tarde",
         tag: "E-PS-1",
-        members: []
+        members: [
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            ,{
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+            ,{
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+        ]
     },
     {
         manager:"Breno Lis Romano",
         schedule: "Manhã",
         tag: "E-UTI-2",
-        members:[]
+        members:[
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+        ]
     },
     {
         manager:"Everaldo",
         schedule: "Manhã",
         tag: "E-NEO-1",
         members:[
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
             {
                 teste:"teste"
             },

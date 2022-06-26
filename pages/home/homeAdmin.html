@@ -72,8 +72,61 @@
                         </div>
                       
                     </div>
-            <div class="col py-3">
-                Conteudo aqui!
+            <div class="col-10 row p-5">
+        
+                <h2 class="fs-1 pb-4">Dashboard</h2>
+                <div class="d-flex flex-column col-9">
+                  
+                    <div class="d-flex flex-row justify-content-between gap-2">
+                        <div class="my-card">
+                            <div class="my-card-middle">
+                                <p class="text-muted">Entrada de Pacientes</p>
+                            </div>
+                            <div class="my-card-bottom">
+                                <p class="fs-4">460 / mês</p>
+                            </div>
+                        </div>   
+                        
+                        <div class="my-card">
+                            <div class="my-card-middle">
+                                <p class="text-muted">Medicamentos Solicitados</p>
+                            </div>
+                            <div class="my-card-bottom">
+                                <p class="fs-4">232 / mês</p>
+                            </div>
+                        </div>
+    
+                        <div class="my-card">
+                            <div class="my-card-middle">
+                                <p class="text-muted">Protocolos Gerados</p>
+                            </div>
+                            <div class="my-card-bottom">
+                                <p class="fs-4">630 / mês</p>
+                            </div>
+                        </div>
+    
+                        <div class="my-card">
+                            <div class="my-card-middle">
+                                <p class="text-muted">Funcionados de Folga</p>
+                            </div>
+                            <div class="my-card-bottom">
+                                <p class="fs-4">8 / hoje</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="fs-3 text-muted p-4">Pacientes por dia</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="d-flex flex-column col-3 card">
+                    <h3 class="fs-3 text-muted p-4 text-center">Gênero dos Pacientes</h3>
+                    <canvas id="pieChart"  ></canvas>
+
+                    <h3 class="fs-3 text-muted p-4 text-center">Membros por Equipe</h3>
+                    <canvas id="pieChart2"  ></canvas>
+                </div>
+                
+              
             </div>
 
             <!-- MODAL EXIT-->
@@ -100,5 +153,108 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+
+    <script>
+
+            const ctx = document.getElementById('barChart').getContext('2d');
+            const ctxPieChart = document.getElementById('pieChart').getContext('2d');
+            const ctxPieChart2 = document.getElementById('pieChart2').getContext('2d');
+
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['01/06/2022', '02/06/2022', '03/06/2022', '04/06/2022', '05/06/2022', '06/06/2022','07/06/2022',
+                             '08/06/2022', '09/06/2022', '10/06/2022', '11/06/2022', '12/06/2022', '13/06/2022','14/06/2022',
+                             '15/06/2022', '16/06/2022', '17/06/2022', '18/06/2022', '19/06/2022', '20/06/2022','21/06/2022',
+                             '22/06/2022', '23/06/2022', '24/06/2022', '25/06/2022', '26/06/2022', '27/06/2022','28/06/2022',
+                             '29/06/2022', '30/06/2022', '31/06/2022',
+                            ],
+                    datasets: [{
+                        label: 'Pacientes Por Dia',
+                        data: [10,41,81,1,40,80,95,70,0,55,96,52,47,6,11,12,45,40,27,31,42,43,17,13,30,27,13,10,15,
+                        	46,	36,16],
+                        backgroundColor: [
+                            'rgb(54, 162, 235,0.2)',
+   
+                        ],
+                        borderColor: [
+                            'rgb(54, 162, 235)',
+
+                        ],
+                        borderWidth: 1,
+                        barThickness: 25
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false,
+
+                        }
+                    }
+                }
+            });
+
+            const myPieChart = new Chart(ctxPieChart, {
+                type: 'doughnut',
+                data:{
+                    labels: [
+                        'Feminino',
+                        'Masculino',
+                    ],
+                    datasets: [{
+                        label: 'Sexo Pacientes',
+                        data: [100,340],
+                        backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                
+                }
+            });
+
+            var teams = JSON.parse(localStorage.getItem("teams"))
+
+            teamsMembers = []
+            teams.forEach(team => {
+      
+                teamsMembers.push( team.members.length)
+            });
+            const myPieChart2 = new Chart(ctxPieChart2, {
+                type: 'pie',
+                data:{
+                    labels: [
+                        'E-UTI-1',
+                        'E-PS-1',
+                        'E-UTI-2',
+                        'E-NEO-1'
+                    ],
+                    datasets: [{
+                        label: 'Sexo Pacientes',
+                        data: teamsMembers,
+                        backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(255, 205, 160)',
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                
+                }
+            });
+    </script>
 </body>
 </html>

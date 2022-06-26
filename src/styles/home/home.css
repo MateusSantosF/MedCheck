@@ -2,3 +2,18 @@
     background-color: var(--teal-600);
     border: 1px solid #353535;
 }
+
+.my-card{
+
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.my-card-top{
+
+}
+
+.my-card-middle{
+
+}
