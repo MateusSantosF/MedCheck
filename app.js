@@ -230,12 +230,62 @@ const teams = [
 
 ]
 
+const drugs = [
+
+    {
+        identifier: "M-23445",
+        name:"Dipirona",
+        manufacturer: "Medley",
+        dosage: "1 mg",
+        generic: "Não",
+        lastPurchase: "01/06/2022",
+        amount: "200"
+    },
+    {
+        identifier: "M-34415",
+        name:"Azitromicina",
+        manufacturer: "Neoquimica",
+        dosage: "400 mg",
+        generic: "Sim",
+        lastPurchase: "15/06/2022",
+        amount: "100"
+    },
+    {
+        identifier: "M-34239",
+        name:"Apovomin",
+        manufacturer: "Dechra",
+        dosage: "3 mg/ml",
+        generic: "Não",
+        lastPurchase: "03/06/2022",
+        amount: "40"
+    },
+    {
+        identifier: "M-55742",
+        name:"Spedra",
+        manufacturer: "Avanafil",
+        dosage: "200 mg",
+        generic: "Não",
+        lastPurchase: "03/06/2022",
+        amount: "34"
+    },
+    {
+        identifier: "M-37425",
+        name:"Vidaza",
+        manufacturer: "Erkim",
+        dosage: "100 mg",
+        generic: "Não",
+        lastPurchase: "06/06/2022",
+        amount: "50"
+    },
+    
+
+]
+
 var firstLoad = localStorage.getItem('firstLoad');
 console.log(firstLoad)
 if(firstLoad == null){
     localStorage.setItem("firstLoad", true)
     firstLoad = true
-    console.log("estrou!!")
 }
 
 
@@ -243,5 +293,6 @@ if (firstLoad == "true"){
     localStorage.setItem("patients", JSON.stringify(patients))
     localStorage.setItem("users", JSON.stringify(users))
     localStorage.setItem("teams", JSON.stringify(teams));
+    localStorage.setItem("drugs", JSON.stringify(drugs));
     localStorage.setItem('firstLoad', false)
 }
