@@ -74,7 +74,7 @@ const patients = [
 const users = [
 
     {
-        register: "U-12345",
+        register: "U-1111",
         firstName: "Mateus",
         lastName: "Santos",
         email: "mateusferreira.dev@gmail.com",
@@ -86,11 +86,11 @@ const users = [
         firstAcess: true
     },
     {
-        register: "U-12345",
+        register: "U-2222",
         firstName: "Vitor",
         lastName: "Fazolli",
         email: "jaozinho.dev@gmail.com",
-        github: "hhttps://github.com/Vitor-Fazoli.png",
+        github: "https://github.com/Vitor-Fazoli.png",
         rotation: "diurno",
         team: "Equipe Y",
         password: "1234",
@@ -98,7 +98,7 @@ const users = [
         firstAcess: true
     },
     {
-        register: "U-12565",
+        register: "U-3333",
         firstName: "David",
         lastName: "Buzatto",
         email: "jonas.dev@gmail.com",
@@ -110,7 +110,7 @@ const users = [
         firstAcess: true
     },
     {
-        register: "U-12345",
+        register: "U-4444",
         firstName: "Gabriel",
         lastName: "Alves",
         email: "mateusferreira.dev@gmail.com",

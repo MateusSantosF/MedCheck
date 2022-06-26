@@ -11,8 +11,10 @@ table#usersTable tr {
     padding-right: 0 !important;
 }
 section.top-functions{
-    
-    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
     background-color: var(--teal-400);
     margin-bottom: 2em;
 }

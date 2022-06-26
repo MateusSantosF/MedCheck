@@ -2,7 +2,7 @@
 function ListAllPatients(){
 
     var table = document.getElementById('usersTable');
-    
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     var patients = JSON.parse(localStorage.getItem('patients'))
 
     patients.forEach( patient => {
@@ -19,24 +19,57 @@ function ListAllPatients(){
         var lastName = row.insertCell();
         lastName.innerHTML = patient.lastName
 
-        var email = row.insertCell();
-        email.innerHTML = patient.email
+       
+
+        if(currentUser.permission == "admin"){
+            var email = row.insertCell();
+            email.innerHTML = patient.email
+        }
+        
 
         var age = row.insertCell();
         age.innerHTML = patient.age
 
-        var healthPlan = row.insertCell();
-        healthPlan.innerHTML = patient.healthPlan
+        if(currentUser.permission == "employee"){
+            var sex = row.insertCell();
+            sex.innerHTML = patient.sex
+        }
 
-        var cardNumber = row.insertCell();
-        cardNumber.innerHTML = patient.cardNumber
+        if(currentUser.permission == "employee"){
+            var profission = row.insertCell();
+            profission.innerHTML = patient.profission
+        }
+
+        if(currentUser.permission == "employee"){
+            var enterData = row.insertCell();
+            enterData.innerHTML = patient.cadastreDate
+        }
+
+        if(currentUser.permission == "admin"){
+            var healthPlan = row.insertCell();
+            healthPlan.innerHTML = patient.healthPlan
+        }
+
+        if(currentUser.permission == "admin"){
+            var cardNumber = row.insertCell();
+            cardNumber.innerHTML = patient.cardNumber
+        }
+       
 
         var buttons = row.insertCell();
-        buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
-        "<button type='button' class='btn btn-primary'>Editar</button>"+
-        `<button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal' onclick='showDetails("${patient.identifier}")\'"> Detalhes</button>`+
-        "<button type='button' class='btn btn-danger'>Excluir</button>"+
-        "</div>"
+        if(currentUser.permission == "admin"){
+            buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
+            "<button type='button' class='btn btn-primary'>Editar</button>"+
+            `<button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal' onclick='showDetails("${patient.identifier}")\'"> Detalhes</button>`+
+            "<button type='button' class='btn btn-danger'>Excluir</button>"+
+            "</div>"
+        }else{
+            buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
+            "<button type='button' class='btn btn-primary'>Editar</button>"+
+            `<button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal' onclick='showDetails("${patient.identifier}")\'"> Detalhes</button>`+
+            "</div>"
+        }
+       
       
     })
 
