@@ -5,7 +5,7 @@
 function listAllProtocols(){
 
   var table = document.getElementById('protocolTable');
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  
   var protocols = JSON.parse(localStorage.getItem('protocols'))
 
   protocols.forEach( protocol => {
@@ -54,4 +54,15 @@ function listAllProtocols(){
     
   })
 
+}
+
+
+var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+if(currentUser.permission == "admin"){
+
+  $(document).ready(function () {
+    $("#dtBasicExample").DataTable();
+    $(".dataTables_length").addClass("bs-select");
+  });
 }
