@@ -26,8 +26,8 @@ const patients = [
     },
     {
         identifier: "P-92445",
-        firstName: "Lais",
-        lastName: "Barros",
+        firstName: "Joana",
+        lastName: "Souza",
         email: "lbarros@gmail.com",
         cpf: "555848785455",
         birthDate: "08/02/2002",
@@ -71,6 +71,42 @@ const patients = [
         profission: "Engenheiro",
         cadastreDate: "02/05/2022",
         observation: "nao sei oque colocar"
+    }
+]
+const protocols = [
+
+    {
+        identifier: "P-32445",
+        firstName: "Mateus",
+        lastName: "Santos",
+        age: "22",
+        sex: "masculino",
+        sector: "UTI",
+        lastProtocolTime: "02/05/2022",
+        lastProtocolType: "cara muito legal",
+        userResponsible: "Vitor Fazolli"
+    },
+    {
+        identifier: "P-32445",
+        firstName: "Carlos",
+        lastName: "Pereira",
+        age: "52",
+        sex: "masculino",
+        sector: "UTI",
+        lastProtocolTime: "02/05/2022",
+        lastProtocolType: "Óbito",
+        userResponsible: "Gabriel Alves"
+    },
+    {
+        identifier: "P-32445",
+        firstName: "Joana",
+        lastName: "Pereira",
+        age: "0",
+        sex: "Feminino",
+        sector: "UTI",
+        lastProtocolTime: "01/07/2022",
+        lastProtocolType: "Fluxo",
+        userResponsible: "Vitor Fazolli"
     }
 ]
 

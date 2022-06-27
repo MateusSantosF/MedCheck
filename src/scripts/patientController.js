@@ -107,6 +107,7 @@ function showDetails(identifier){
     var inputCEP = document.getElementById("inputCEP");
     var inputDIstrict = document.getElementById("inputDIstrict");
     var inputCadastreDate = document.getElementById("inputCadastreDate");
+    var inputSector = document.getElementById("inputSector");
 
     var inputObservation = document.getElementById("inputObservation");
     
@@ -117,6 +118,7 @@ function showDetails(identifier){
     inputHealthPlan.value = patient.healthPlan
     inputStreet.value = patient.street
     inputCountry.value = patient.country
+    inputSector.value = patient.sector
 
     inputFullname.value = patient.firstName +" "+patient.lastName 
     inputBirthdate.value = patient.birthDate
