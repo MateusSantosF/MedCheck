@@ -82,8 +82,8 @@ const protocols = [
         age: "22",
         sex: "masculino",
         sector: "UTI",
-        lastProtocolTime: "02/05/2022",
-        lastProtocolType: "cara muito legal",
+        lastProtocolTime: "20:00h",
+        lastProtocolType: "Fluxo",
         userResponsible: "Vitor Fazolli"
     },
     {
@@ -93,7 +93,18 @@ const protocols = [
         age: "52",
         sex: "masculino",
         sector: "UTI",
-        lastProtocolTime: "02/05/2022",
+        lastProtocolTime: "19:00h",
+        lastProtocolType: "Fluxo",
+        userResponsible: "Gabriel Alves"
+    },
+    {
+        identifier: "P-32445",
+        firstName: "Jose",
+        lastName: "Gomes",
+        age: "49",
+        sex: "masculino",
+        sector: "UTI",
+        lastProtocolTime: "21:00h",
         lastProtocolType: "Óbito",
         userResponsible: "Gabriel Alves"
     },
@@ -104,7 +115,7 @@ const protocols = [
         age: "0",
         sex: "Feminino",
         sector: "UTI",
-        lastProtocolTime: "01/07/2022",
+        lastProtocolTime: "19:43h",
         lastProtocolType: "Fluxo",
         userResponsible: "Vitor Fazolli"
     }
@@ -333,5 +344,6 @@ if (firstLoad == "true"){
     localStorage.setItem("users", JSON.stringify(users))
     localStorage.setItem("teams", JSON.stringify(teams));
     localStorage.setItem("drugs", JSON.stringify(drugs));
+    localStorage.setItem("protocols", JSON.stringify(protocols));
     localStorage.setItem('firstLoad', false)
 }
