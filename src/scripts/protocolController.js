@@ -1,68 +1,53 @@
+$("#myModal").on("shown.bs.modal", function () {
+  $("#myInput").trigger("focus");
+});
 
+function listAllProtocols() {
+  var table = document.getElementById("protocolTable");
 
+  var protocols = JSON.parse(localStorage.getItem("protocols"));
 
+  protocols.forEach((protocol) => {
+    var row = table.insertRow();
+    row.classList.toggle("table-light");
 
-function listAllProtocols(){
+    var register = row.insertCell();
+    register.innerHTML = protocol.identifier;
 
-  var table = document.getElementById('protocolTable');
-  
-  var protocols = JSON.parse(localStorage.getItem('protocols'))
+    var firstName = row.insertCell();
+    firstName.innerHTML = protocol.firstName;
 
-  protocols.forEach( protocol => {
+    var lastName = row.insertCell();
+    lastName.innerHTML = protocol.lastName;
 
-      var row = table.insertRow();
-      row.classList.toggle('table-light')
+    var age = row.insertCell();
+    age.innerHTML = protocol.age;
 
-      var register = row.insertCell();
-      register.innerHTML = protocol.identifier;
+    var sex = row.insertCell();
+    sex.innerHTML = protocol.sex;
 
-      var firstName = row.insertCell();
-      firstName.innerHTML = protocol.firstName;
+    var lastProtocolTime = row.insertCell();
+    lastProtocolTime.innerHTML = protocol.lastProtocolTime;
 
-      var lastName = row.insertCell();
-      lastName.innerHTML = protocol.lastName
-      
+    var lastProtocolType = row.insertCell();
+    lastProtocolType.innerHTML = protocol.lastProtocolType;
 
-      var age = row.insertCell();
-      age.innerHTML = protocol.age
+    var userResponsible = row.insertCell();
+    userResponsible.innerHTML = protocol.userResponsible;
 
+    var buttons = row.insertCell();
 
-      var sex = row.insertCell();
-      sex.innerHTML = protocol.sex
-      
-      var lastProtocolTime = row.insertCell();
-      lastProtocolTime.innerHTML = protocol.lastProtocolTime
-
-      var lastProtocolType = row.insertCell();
-      lastProtocolType.innerHTML = protocol.lastProtocolType
-
-    
-
-      var userResponsible = row.insertCell();
-      userResponsible.innerHTML = protocol.userResponsible
-
-      var buttons = row.insertCell();
-    
-          buttons.innerHTML = "<div class='btn-group gap-2' role='group' aria-label='Basic example'> "+
-          `<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
-                            data-bs-target="#protocolModal" >+Protocolo</button>`+
-      
-          "<button type='button' class='btn btn-success'>Detalhes</button>"+
-          "</div>"
-      
-     
-    
-  })
-
+    buttons.innerHTML =
+      "<div class='btn-group gap-2' role='group' aria-label='Basic example'> " +
+      `<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+                            data-bs-target="#protocolModal" >+Protocolo</button>` +
+      "<button type='button' class='btn btn-success'>Detalhes</button>" +
+      "</div>";
+  });
 }
 
+var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-if(currentUser.permission == "admin"){
-
-  $(document).ready(function () {
-    $("#dtBasicExample").DataTable();
-    $(".dataTables_length").addClass("bs-select");
-  });
+if (currentUser.permission == "admin") {
+ 
 }

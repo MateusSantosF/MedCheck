@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>MedCheck</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"
@@ -77,6 +76,9 @@
                             <li class="nav-item">
                               <a class="nav-link fs-5  text-white" href="./drugManager.html">Medicamentos</a>
                           </li>
+                          <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./exercisesManager.html">Exercícios</a>
+                        </li>
                         </ul>
                         <!-- PROFILE -->
                         <div class="dropdown pb-4 p-4 fixed-bottom">
@@ -109,7 +111,7 @@
                             id="dtBasicExample"
                             class="table"
                             width="100%"
-                            height="80%"
+                            height="60%"
                           >
                             <thead>
                               <tr>
@@ -118,149 +120,134 @@
                                 <th class="th-sm">Paciente</th>
                                 <th class="th-sm">Descrição</th>
                                 <th class="th-sm">Data de agendamento</th>
-                                <th class="th-sm">Editar</th>
                                 <th class="th-sm">Detalhes</th>
                               </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Tef2d7e63-f968-4d01-81b5-681d7438ab62</td>
-                                    <td>nhowse0</td>
+                                    <td>Marcos</td>
                                     <td>Ninette</td>
                                     <td>Synergistic user-facing archive</td>
                                     <td>04/07/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T35f2051e-f212-4d0a-bebf-ac3e46b56b40</td>
-                                    <td>emardee1</td>
+                                    <td>Mateus</td>
                                     <td>Ezri</td>
                                     <td>Expanded client-server interface</td>
                                     <td>10/10/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T41925c4d-464a-411b-bdc8-c4ae9b6763b2</td>
-                                    <td>mmacbane2</td>
+                                    <td>Lucas</td>
                                     <td>Matthew</td>
                                     <td>Mandatory modular instruction set</td>
                                     <td>26/02/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>Tb46b39a2-d661-4f4b-8170-4e139cf280b1</td>
-                                    <td>dyakolev3</td>
+                                    <td>Kaio</td>
                                     <td>Duncan</td>
                                     <td>Profound uniform data-warehouse</td>
                                     <td>27/05/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T2a5b4527-7fb3-4f1b-9290-3f736fcc4274</td>
-                                    <td>gbarbier4</td>
+                                    <td>Joana</td>
                                     <td>Gill</td>
                                     <td>Implemented intermediate strategy</td>
                                     <td>29/09/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T7b2b22b2-88d0-49e1-8f77-8dbbafa09936</td>
-                                    <td>rmichelmore5</td>
+                                    <td>Michele</td>
                                     <td>Rufus</td>
                                     <td>Intuitive fault-tolerant groupware</td>
                                     <td>01/07/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T62a723b2-b980-4ad8-815c-457b32157691</td>
-                                    <td>rfairbeard6</td>
+                                    <td>Robson</td>
                                     <td>Rosemonde</td>
                                     <td>Stand-alone context-sensitive internet solution</td>
                                     <td>18/06/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T4a94ebfc-c71d-4695-a11a-ad28e168082c</td>
-                                    <td>nhargrove7</td>
+                                    <td>Jose</td>
                                     <td>Ninette</td>
                                     <td>Configurable multimedia leverage</td>
                                     <td>29/10/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T04f601b1-a673-4820-8d24-4b8e754bdd9e</td>
-                                    <td>jharcombe8</td>
+                                    <td>Rafael</td>
                                     <td>Josefina</td>
                                     <td>Diverse stable challenge</td>
                                     <td>13/03/2022</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T2d849707-d2b0-4fc7-867b-ff48b4a4fdc9</td>
-                                    <td>cgleadhell9</td>
+                                    <td>Lais</td>
                                     <td>Clint</td>
                                     <td>Stand-alone bi-directional benchmark</td>
                                     <td>08/11/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T2083d059-511b-4b45-bdc1-9549c79e1af4</td>
-                                    <td>rlowdena</td>
+                                    <td>Rosana</td>
                                     <td>Ruthi</td>
                                     <td>Grass-roots client-driven paradigm</td>
                                     <td>01/02/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>Tb23f2ef7-a3da-4788-a03b-c73eb0d1d959</td>
-                                    <td>aizhakb</td>
+                                    <td>Gabriela</td>
                                     <td>Aleen</td>
                                     <td>Customizable systemic function</td>
                                     <td>21/07/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>Tfcf2f6aa-4e56-4ec2-8080-0a41b2a64a13</td>
-                                    <td>kferebeec</td>
+                                    <td>Claudia</td>
                                     <td>Karylin</td>
                                     <td>Open-architected multi-tasking knowledge user</td>
                                     <td>22/03/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>Tc6c56709-e176-4eb0-a3df-78b6108fc615</td>
-                                    <td>azoellnerd</td>
+                                    <td>Gustavo</td>
                                     <td>Abram</td>
                                     <td>Integrated maximized groupware</td>
                                     <td>19/01/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -269,8 +256,7 @@
                                     <td>Colline</td>
                                     <td>Organized stable attitude</td>
                                     <td>02/03/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -279,8 +265,7 @@
                                     <td>Siward</td>
                                     <td>Future-proofed clear-thinking secured line</td>
                                     <td>15/04/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -289,8 +274,7 @@
                                     <td>Arabelle</td>
                                     <td>Organic asymmetric system engine</td>
                                     <td>03/03/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -299,8 +283,7 @@
                                     <td>Emmery</td>
                                     <td>Synergistic motivating forecast</td>
                                     <td>10/05/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -309,8 +292,7 @@
                                     <td>Merline</td>
                                     <td>Progressive tangible challenge</td>
                                     <td>31/01/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -319,8 +301,7 @@
                                     <td>Nat</td>
                                     <td>Phased background contingency</td>
                                     <td>06/03/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -329,8 +310,7 @@
                                     <td>Tilda</td>
                                     <td>User-centric uniform functionalities</td>
                                     <td>23/06/2022</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -339,8 +319,7 @@
                                     <td>Golda</td>
                                     <td>Team-oriented modular synergy</td>
                                     <td>20/12/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -349,8 +328,7 @@
                                     <td>Kiah</td>
                                     <td>Right-sized zero defect project</td>
                                     <td>21/07/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -359,8 +337,7 @@
                                     <td>Denna</td>
                                     <td>Ameliorated executive knowledge user</td>
                                     <td>20/12/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -369,8 +346,7 @@
                                     <td>Jessie</td>
                                     <td>Ameliorated optimizing open system</td>
                                     <td>23/03/2022</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -379,8 +355,7 @@
                                     <td>Rene</td>
                                     <td>Intuitive 24 hour conglomeration</td>
                                     <td>06/05/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -389,8 +364,7 @@
                                     <td>Lina</td>
                                     <td>Intuitive heuristic superstructure</td>
                                     <td>22/06/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -399,8 +373,7 @@
                                     <td>Robbie</td>
                                     <td>Virtual didactic portal</td>
                                     <td>13/03/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -409,8 +382,7 @@
                                     <td>Joyan</td>
                                     <td>Profit-focused modular matrices</td>
                                     <td>27/09/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -419,8 +391,7 @@
                                     <td>Dallon</td>
                                     <td>Cross-group explicit local area network</td>
                                     <td>18/12/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -429,8 +400,7 @@
                                     <td>Britt</td>
                                     <td>Persistent explicit encryption</td>
                                     <td>01/07/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -439,8 +409,7 @@
                                     <td>Maybelle</td>
                                     <td>Visionary intangible functionalities</td>
                                     <td>24/02/2022</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -449,8 +418,7 @@
                                     <td>Amalle</td>
                                     <td>Multi-channelled multi-tasking function</td>
                                     <td>25/11/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -459,8 +427,7 @@
                                     <td>Kitty</td>
                                     <td>Focused content-based intranet</td>
                                     <td>09/05/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -469,8 +436,7 @@
                                     <td>Gibbie</td>
                                     <td>Adaptive 24/7 adapter</td>
                                     <td>09/01/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -479,8 +445,7 @@
                                     <td>Nikolaus</td>
                                     <td>Managed composite ability</td>
                                     <td>18/01/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -489,8 +454,7 @@
                                     <td>Dame</td>
                                     <td>Monitored asynchronous pricing structure</td>
                                     <td>26/10/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -499,8 +463,7 @@
                                     <td>Aristotle</td>
                                     <td>Optional well-modulated access</td>
                                     <td>23/09/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -509,8 +472,7 @@
                                     <td>Fabian</td>
                                     <td>Distributed needs-based structure</td>
                                     <td>28/11/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -519,8 +481,7 @@
                                     <td>Godwin</td>
                                     <td>Pre-emptive actuating hierarchy</td>
                                     <td>08/11/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -529,8 +490,7 @@
                                     <td>Ferd</td>
                                     <td>Switchable neutral hierarchy</td>
                                     <td>10/03/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -539,8 +499,7 @@
                                     <td>Mommy</td>
                                     <td>Persistent zero tolerance strategy</td>
                                     <td>16/11/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -549,8 +508,7 @@
                                     <td>Shaw</td>
                                     <td>Customizable exuding leverage</td>
                                     <td>20/09/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -559,8 +517,7 @@
                                     <td>Jesselyn</td>
                                     <td>Automated neutral concept</td>
                                     <td>12/10/2020</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -569,18 +526,16 @@
                                     <td>Arch</td>
                                     <td>Open-architected methodical orchestration</td>
                                     <td>26/05/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
                                     <td>T334e77a2-68a3-471c-9d5a-c050e666632b</td>
-                                    <td>akeene19</td>
+                                    <td>Marcos</td>
                                     <td>Amargo</td>
                                     <td>Advanced well-modulated core</td>
                                     <td>06/11/2021</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -589,8 +544,7 @@
                                     <td>Dallis</td>
                                     <td>Re-engineered demand-driven internet solution</td>
                                     <td>27/09/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -599,8 +553,7 @@
                                     <td>Phillipe</td>
                                     <td>Visionary stable groupware</td>
                                     <td>05/06/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -609,8 +562,7 @@
                                     <td>Emerson</td>
                                     <td>Decentralized reciprocal initiative</td>
                                     <td>06/02/2019</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
                                   
                                   <tr>
@@ -619,9 +571,33 @@
                                     <td>Sheelah</td>
                                     <td>Persevering motivating local area network</td>
                                     <td>12/10/2018</td>
-                                     <td><button type='button' class='btn btn-primary'> Editar </button></td>
-                                     <td><button type='button' class='btn btn-success'> Detalhes </button></td>
+                                     <td><button type='button' class='btn btn-success' data-bs-target="#detailsModal" data-bs-toggle='modal'> Detalhes </button></td>
                                 </tr>
+
+                                <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="detailsModalLabel">Exclusão</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Tem certeza que deseja excluir o medicamento selecionado?
+                                    </div>
+                                    <div class="modal-footer">
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </tfoot>
                           </table>
                         </div>
@@ -649,6 +625,5 @@
 
     </script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</body>
+   </body>
 </html>
