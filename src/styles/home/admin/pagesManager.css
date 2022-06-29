@@ -5,6 +5,14 @@ table#usersTable tr {
 
 }
 
+table thead{
+    text-align: left;
+}
+
+table tbody tr td{
+    text-align: left;
+}
+
 .page-functions{
 
     padding-left: 0 !important;
