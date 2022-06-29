@@ -44,7 +44,7 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
     <script src="../../../src/scripts/protocolController.js"></script>
 </head>
-<body onload="ListAllPatients()">
+<body>
 
     <header>
         <h1 class="sr-only">Inicio</h1>
@@ -81,7 +81,7 @@
                         </li>
                         </ul>
                         <!-- PROFILE -->
-                        <div class="dropdown pb-4 p-4 fixed-bottom">
+                        <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
                                 <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
@@ -101,7 +101,7 @@
 
 
                 <section class="top-functions">
-                        <h1 class="ps-5 text-white">Gerenciamento de Protocolos</h1>
+                        <h1 class="ps-5 text-muted">Gerenciamento de Protocolos</h1>
                 </section>
                 <section class="bottom-functions">
                     
@@ -607,6 +607,25 @@
         </div>
        
     </main>
+
+    <!-- MODAL EXIT-->
+    <div class="modal" tabindex="-1" id="exitModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">MedCheck</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Realmente deseja sair?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="location.href='../../../index.html'">Sair</button>
+            <button type="button" class="btn btn-primary">Cancelar</button>
+          </div>
+        </div>
+      </div>
+  </div>
     <!--SCRIPT-->        
     <script >
         

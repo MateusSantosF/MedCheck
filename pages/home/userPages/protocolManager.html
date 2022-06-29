@@ -45,7 +45,7 @@
                   
                         </ul>
                         <!-- PROFILE -->
-                        <div class="dropdown pb-4 p-4 fixed-bottom">
+                        <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
                             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
                                 <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
@@ -65,28 +65,25 @@
 
 
                 <section class="top-functions">
-                    <h1 class="ps-5 text-white">Protocolos</h1>
+                    <h1 class="ps-5 text-muted">Protocolos</h1>
                 </section>
-                <section class="bottom-functions">
-                    
+                <section class="bottom-functions">             
                     <div class="d-flex flex-row w-100 justify-content-between align-items-center">
                        
                         <div class="flex-column">
                             <label class="form-label ps-3" for="form1">Buscar</label><br/>
                             <div class="form-outline mb-3 ps-3 btn-group">   
-            
                                 <input type="search" id="searchBar" class="form-control" />
                                 <button type="button" class="btn btn-primary">Buscar</button>   
                               </div> 
-                        </div>
-       
+                        </div> 
                     </div>
                        
 
                     <div class="container overflow-scroll" style="max-height:500px;">
                         <table class="table" id="protocolTable">
                             <thead> 
-                                <tr >
+                                <tr>
                                     <th>Identificação</th>
                                     <th>Nome</th>
                                     <th>Sobrenome</th>
@@ -102,13 +99,8 @@
                                 <tr class="sr-only"><td></td></tr>   
                             </tbody>   
                         </table>
-
                     </div>
-                  
-
                 </section>
-                
-
             </div>
 
             <!-- MODAL EXIT-->
@@ -129,6 +121,25 @@
                   </div>
                 </div>
             </div>
+
+             <!-- MODAL PROTOCOL-->
+             <div class="modal" tabindex="-1" id="exitModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">MedCheck</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Realmente deseja sair?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="location.href='../../../index.html'">Sair</button>
+                    <button type="button" class="btn btn-primary">Cancelar</button>
+                  </div>
+                </div>
+              </div>
+          </div>
 
              <!-- MODAL DETALHES-->
              <div class="modal fade bd-example-modal-xl" id="detailsModal" tabindex="-1" aria-hidden="true">
@@ -256,7 +267,6 @@
 
                       </div>
                       <div class="modal-footer">
-               
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
                       </div>
                    </div>     
@@ -266,7 +276,7 @@
 
     
             <!-- MODAL REGISTER PATIENT-->
-            <div class="modal fade bd-example-modal-xl" id="protocolModal" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="protocolModal" tabindex="-1" aria-hidden="true">
                 
                 <div class="container-fluid d-flex flex-row p-3">
                     <!-- PRE MODELS-->
@@ -359,7 +369,7 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingFour">
                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Lesões e Localizações
+                                                  
                                               </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -723,24 +733,11 @@
                            <div class="modal-body w-100">
                               <form>
                                   <div class="d-flex flex-row">
-                                      <div class="container d-flex flex-column">
-                                          
-                                          
-                                      </div>
-      
-                                      <div class="container d-flex flex-column">
-                                          
-                                      </div>
-          
-                                      <div class="container d-flex flex-column">
-                                          
-          
-                                      </div>
-                                      
+                                     
       
                                   </div>  
                                   <div class="mb-3 ps-3">
-                                      <label for="inputObservation" class="form-label">Eu, Mateus Santos relato:</label>
+                                    <label for="inputObservation" class="form-label"></label>
                                       <textarea class="w-100 h-25"   style="resize: none;padding: 1em; color: black;" id="inputObservation" ></textarea>
                                   </div>       
                                 </form>
@@ -757,6 +754,7 @@
                 
                 
             </div>
+          </div>
    <!--SCRIPT-->        
     <script >
             

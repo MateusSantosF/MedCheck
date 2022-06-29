@@ -41,7 +41,7 @@ function listAllProtocols() {
       "<div class='btn-group gap-2' role='group' aria-label='Basic example'> " +
       `<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
                             data-bs-target="#protocolModal" >+Protocolo</button>` +
-      "<button type='button' class='btn btn-success'>Detalhes</button>" +
+      `<button type='button' class='btn btn-success' data-bs-toggle="modal" data-bs-target="#detailsModal2">Detalhes</button>`+
       "</div>";
   });
 }
@@ -49,5 +49,8 @@ function listAllProtocols() {
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (currentUser.permission == "admin") {
- 
+  $(document).ready(function () {
+    $("#dtBasicExample").DataTable();
+    $(".dataTables_length").addClass("bs-select");
+  });
 }

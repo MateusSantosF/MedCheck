@@ -19,14 +19,6 @@ function ListAllPatients(){
         var lastName = row.insertCell();
         lastName.innerHTML = patient.lastName
 
-       
-
-        if(currentUser.permission == "admin"){
-            var email = row.insertCell();
-            email.innerHTML = patient.email
-        }
-        
-
         var age = row.insertCell();
         age.innerHTML = patient.age
 
@@ -39,8 +31,7 @@ function ListAllPatients(){
             var profission = row.insertCell();
             profission.innerHTML = patient.profission
         }
-
-      
+     
 
         if(currentUser.permission == "employee"){
             var enterData = row.insertCell();

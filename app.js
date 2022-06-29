@@ -129,7 +129,7 @@ const users = [
         lastName: "Santos",
         email: "mateusferreira.dev@gmail.com",
         github: "https://github.com/MateusSantosF.png",
-        rotation: "diurno",
+        rotation: "noite",
         team: "Equipe X",
         password: "123",
         permission: "admin",
@@ -141,7 +141,7 @@ const users = [
         lastName: "Fazolli",
         email: "jaozinho.dev@gmail.com",
         github: "https://github.com/Vitor-Fazoli.png",
-        rotation: "diurno",
+        rotation: "tarde",
         team: "Equipe Y",
         password: "1234",
         permission: "employee",
@@ -153,7 +153,7 @@ const users = [
         lastName: "Buzatto",
         email: "jonas.dev@gmail.com",
         github:"https://github.com/davidbuzatto.png",
-        rotation: "diurno",
+        rotation: "manhã",
         team: "Equipe Y",
         password: "1234",
         permission: "admin",
@@ -165,11 +165,322 @@ const users = [
         lastName: "Alves",
         email: "mateusferreira.dev@gmail.com",
         github: "https://github.com/alvesmgabriel.png",
-        rotation: "diurno",
+        rotation: "manhã",
         team: "Equipe X",
         password: "1234",
         permission: "employee",
         firstAcess: true
+    },
+    {
+        register: "U-5555",
+        firstName: "Everaldo",
+        lastName: "Gomes",
+        email: "everaldo@gmail.com",
+        github: "https://github.com/alvesmgabriel.png",
+        rotation: "tarde",
+        team: "Equipe K",
+        password: "1234",
+        permission: "chief",
+        firstAcess: true,
+        teams: [
+            {
+                manager:"Everaldo Gomes",
+                schedule: "Manhã",
+                tag: "E-PS-1",
+                members:[
+                    {
+                        identifier: "U-12333",
+                        name:"Mateus Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-77777",
+                        name:"Rosa Maria",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-99933",
+                        name:"Claudia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-12322",
+                        name:"Célia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-323232",
+                        name:"Leticia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    }
+                ]
+            },
+            {
+                manager:"Everaldo Gomes",
+                schedule: "Tarde",
+                tag: "UTI-1",
+                members:[
+                    {
+                        identifier: "U-12333",
+                        name:"Mateus Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-77777",
+                        name:"Rosa Maria",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-99933",
+                        name:"Claudia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-12322",
+                        name:"Célia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-323232",
+                        name:"Leticia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    }
+                ]
+                
+            },
+            {
+                manager:"Everaldo Gomes",
+                schedule: "Noturno",
+                tag: "NEO-1",
+                members:[
+                    {
+                        identifier: "U-12333",
+                        name:"Mateus Santos",
+                    },
+                    {
+                        identifier: "U-77777",
+                        name:"Rosa Maria",
+                    },
+                    {
+                        identifier: "U-99933",
+                        name:"Claudia Santos",
+                    },
+                    {
+                        identifier: "U-12322",
+                        name:"Célia Santos",
+                    },
+                    {
+                        identifier: "U-323232",
+                        name:"Leticia Santos",
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        register: "U-6666",
+        firstName: "Breno",
+        lastName: "Romano",
+        email: "breno.romano@gmail.com",
+        github: "https://github.com/blromano.png",
+        rotation: "integral",
+        team: "Equipe Z",
+        password: "1234",
+        permission: "chief",
+        firstAcess: true,
+        teams: [
+            {
+                manager:"Breno Romano",
+                schedule: "Manhã",
+                tag: "E-PS-1",
+                members:[
+                    {
+                        identifier: "U-23243",
+                        name:"Mateus Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-34343",
+                        name:"Rosa Maria",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-34455",
+                        name:"Claudia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-23232",
+                        name:"Célia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-22222",
+                        name:"Leticia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    }
+                ]
+            },
+            {
+                manager:"Breno Romanoo",
+                schedule: "Tarde",
+                tag: "UTI-1",
+                members:[
+                    {
+                        identifier: "U-12333",
+                        name:"Mateus Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-77777",
+                        name:"Rosa Maria",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-99933",
+                        name:"Claudia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-12322",
+                        name:"Célia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    },
+                    {
+                        identifier: "U-323232",
+                        name:"Leticia Santos",
+                        patients:[
+                            {},
+                            {},
+                            {},
+                            {},
+                        ]
+                    }
+                ]
+            },
+            {
+                manager:"Breno Romanoo",
+                schedule: "Noturno",
+                tag: "NEO-1",
+                members:[
+                    {
+                        identifier: "U-12333",
+                        name:"Mateus Santos",
+                    },
+                    {
+                        identifier: "U-77777",
+                        name:"Rosa Maria",
+                    },
+                    {
+                        identifier: "U-99933",
+                        name:"Claudia Santos",
+                    },
+                    {
+                        identifier: "U-12322",
+                        name:"Célia Santos",
+                    },
+                    {
+                        identifier: "U-323232",
+                        name:"Leticia Santos",
+                    }
+                ]
+            }
+        ]
     }
 ]
 
@@ -276,6 +587,73 @@ const teams = [
                 teste:"teste"
             }
         ]
+    },
+    {
+        manager:"Breno Lis Romano",
+        schedule: "Manhã",
+        tag: "E-NEO-1",
+        members:[
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+            ,
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+        ]
+    },
+    {
+        manager:"Breno lis Romano",
+        schedule: "Manhã",
+        tag: "E-NEO-1",
+        members:[
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+            ,
+            {
+                teste:"teste"
+            },
+            {
+                teste:"teste"
+            }
+        ]
     }
 
 ]
@@ -332,7 +710,7 @@ const drugs = [
 ]
 
 var firstLoad = localStorage.getItem('firstLoad');
-console.log(firstLoad)
+
 if(firstLoad == null){
     localStorage.setItem("firstLoad", true)
     firstLoad = true

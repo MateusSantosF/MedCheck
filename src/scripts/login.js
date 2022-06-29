@@ -21,8 +21,10 @@ function firstAcessDefinePassword() {
 
   if (currentUser.permission == "admin") {
     location.href = "../home/homeAdmin.html";
-  } else {
+  } else if(currentUser.permission == "employee") {
     location.href = "../home/homeUser.html";
+  }else{
+    location.href = "../home/homeChief.html";
   }
 }
 
@@ -39,7 +41,6 @@ function validateUser() {
     }
   });
 
-  console.log(currentUser);
 
   if (currentUser != undefined) {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
@@ -48,8 +49,10 @@ function validateUser() {
     } else {
       if (currentUser.permission == "admin") {
         location.href = "./pages/home/homeAdmin.html";
-      } else {
+      } else if(currentUser.permission == "employee") {
         location.href = "./pages/home/homeUser.html";
+      }else{
+        location.href = "./pages/home/homeChief.html"
       }
     }
   } else {

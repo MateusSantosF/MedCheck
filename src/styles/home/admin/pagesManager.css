@@ -13,9 +13,9 @@ table#usersTable tr {
 section.top-functions{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     height: 20vh;
-    background-color: var(--teal-400);
+ 
     margin-bottom: 2em;
 }
 
