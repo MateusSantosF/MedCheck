@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +13,15 @@
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Poppins:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>MedCheck</title>
 </head>
+
 <body onload="listAllTeams()">
 
     <header>
@@ -25,208 +30,273 @@
     <main>
         <div class="container-fluid">
             <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 min-vh-100" style="background-color: var(--teal-600);">
-                    <a href="#" class="d-flex justify-content-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span id="logotipo" class="text-center fs-3 d-sm-inline text-center p-4"><span>MEDC</span>heck</span>
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 min-vh-100"
+                    style="background-color: var(--teal-600);">
+                    <a href="#"
+                        class="d-flex justify-content-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span id="logotipo"
+                            class="text-center fs-3 d-sm-inline text-center p-4"><span>MEDC</span>heck</span>
                     </a>
-                        <ul class="nav flex-column nav-pills p-2">
-                            <li class="nav-item">
-                                <a class="nav-link fs-5 text-white" aria-current="page" href="../homeAdmin.html">Dashboard</a>
+                    <ul class="nav flex-column nav-pills p-2">
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-white" aria-current="page"
+                                href="../homeAdmin.html">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link  fs-5 text-white" href="./patientManager.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./protocolManager.html">Protocolos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  fs-5 text-white" aria-current="page"
+                                href="./userManager.html">Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 active text-white" href="#">Equipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./drugManager.html">Medicamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./exercisesManager.html">Exercícios</a>
+                        </li>
+                    </ul>
+                    <!-- PROFILE -->
+                    <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#profileModal">Perfil</a>
                             </li>
-                           
-                            <li class="nav-item">
-                                <a class="nav-link  fs-5 text-white" href="./patientManager.html">Pacientes</a>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./protocolManager.html">Protocolos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link  fs-5 text-white" aria-current="page" href="./userManager.html">Usuários</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5 active text-white" href="#">Equipes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./drugManager.html">Medicamentos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./exercisesManager.html">Exercícios</a>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitModal">Sair</a>
                             </li>
                         </ul>
-                        <!-- PROFILE -->
-                        <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
-                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                                <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                                <li><a class="dropdown-item" href="#">Configurações</a></li>
-                                <li><a class="dropdown-item" >Perfil</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitModal">Sair</a></li>
-                            </ul>
-                        </div>
-                      
                     </div>
-            <div class="col page-functions">
+
+                </div>
+                <div class="col page-functions">
 
 
-                <section class="top-functions">
+                    <section class="top-functions">
                         <h1 class="ps-5 text-muted">Gerenciamento de Equipes</h1>
 
-                      
-                </section>
 
-                <section class="bottom-functions">
+                    </section>
 
-                    <div class="d-flex flex-row w-100 justify-content-between align-items-center">
-                       
-                        <div class="flex-column">
-                            <label class="form-label ps-3" for="form1">Buscar por nome</label><br/>
-                            <div class="form-outline mb-3 ps-3 btn-group"> 
-                                <input type="search" id="form1" class="form-control" />
-                                <button type="button" class="btn btn-primary">Buscar</button>   
-                            </div> 
-                        </div>
-                
-                       <div>
-                            <button type="button" class="btn btn-success mt-4" data-bs-toggle="modal" 
-                            data-bs-target="#signup-modal" >Nova Equipe</button>
-                        </div>
-                   </div>
-                 
-                    <div class="container overflow-scroll" style="max-height:500px;">
-                        <table class="table bg-white align-middle" id="teamsTable">
-                            <thead> 
-                                <tr>
-                                    <th>Lider</th>
-                                    <th>TAG</th>
-                                    <th>Turno</th>
-                                    <th>Qtd. Membros</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="sr-only"><td></td></tr>   
-                            </tbody>   
-                        </table>
+                    <section class="bottom-functions">
 
-                    </div>
-                  
+                        <div class="d-flex flex-row w-100 justify-content-between align-items-center">
 
-                </section>
-                
-
-            </div>
-
-            <!-- MODAL EXIT-->
-            <div class="modal" tabindex="-1" id="exitModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">MedCheck</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Realmente deseja sair?</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="location.href='../../../index.html'">Sair</button>
-                      <button type="button" class="btn btn-primary">Cancelar</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <!-- USER SIGNUP-->
-            <div class="modal fade bd-example-modal-xl" id="signup-modal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    
-                  <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="ps-3">Cadastrar Nova Equipe</h3>
-                    </div>
-                     <div class="modal-body">
-                        <form>
-                            <div class="d-flex flex-row">
-                                <div class="container d-flex flex-column">
-                                    <div class="mb-3">
-                                        <label for="inputManager" class="form-label">Lider da Equipe</label>
-                                        <input type="text" class="form-control" id="inputManager">
-                                      </div>
-                                    <div class="mb-3">
-                                        <label for="inputSchedule" class="form-label">Turno</label>
-                                        <select class="form-select" >
-                                        <option value="1">Manhã</option>
-                                        <option value="1">Tarde</option>
-                                        <option value="2">Noite</option>
-                                      </select>
-                                    </div>
-                                    <div class="mb-3">
-                                      <label for="inputTag" class="form-label">TAG</label>
-                                      <input type="text" class="form-control" id="inputTag" aria-describedby="emailHelp">
-                                    </div>
-                                  
-                                  
+                            <div class="flex-column">
+                                <label class="form-label ps-3" for="form1">Buscar por nome</label><br />
+                                <div class="form-outline mb-3 ps-3 btn-group">
+                                    <input type="search" id="form1" class="form-control" />
+                                    <button type="button" class="btn btn-primary">Buscar</button>
                                 </div>
-                                <div class="container d-flex flex-column">
+                            </div>
 
-                                    <label for="inputEmailMember" class="form-label ">Digite o email do Membro</label>
-                                    <div class="form-outline mb-3 btn-group"> 
-                                        <input type="email" minlength="5" class="form-control" id="inputEmailMember" />
-                                        <button type="button" class="btn btn-primary" id="btnAdd" onclick="addUserInList()">Adicionar</button>   
-                                    </div> 
-                                       <label for="exampleInputPassword1" class="form-label">Membros Adicionados</label>
-                                        <ul id="listMembers" 
-                                        style="border: 1px solid #adb5bd; border-radius: 5px;max-height: 130px; list-style-type: none; overflow-y: scroll; height: 100%;">
-                                           <li>
-                                          
-                                           </li>
-                                           <li>
-                                     
-                                       </ul>
-                                    
-                                </div>
+                            <div>
+                                <button type="button" class="btn btn-success mt-4" data-bs-toggle="modal"
+                                    data-bs-target="#signup-modal">Nova Equipe</button>
+                            </div>
+                        </div>
 
-                            </div>         
-                          </form>
+                        <div class="container overflow-scroll" style="max-height:500px;">
+                            <table class="table bg-white align-middle" id="teamsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Lider</th>
+                                        <th>TAG</th>
+                                        <th>Turno</th>
+                                        <th>Qtd. Membros</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="sr-only">
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                      </div>
-                      <div class="modal-footer">
-               
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cadastrar</button>
-                      </div>
-                   </div>
-                  
+                        </div>
+
+
+                    </section>
+
+
                 </div>
-           
-             
-        
-        </div>
-       
+
+                <!-- MODAL EXIT-->
+                <div class="modal" tabindex="-1" id="exitModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">MedCheck</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Realmente deseja sair?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                    onclick="location.href='../../../index.html'">Sair</button>
+                                <button type="button" class="btn btn-primary">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- USER SIGNUP-->
+                <div class="modal fade bd-example-modal-xl" id="signup-modal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="ps-3">Cadastrar Nova Equipe</h3>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="d-flex flex-row">
+                                        <div class="container d-flex flex-column">
+                                            <div class="mb-3">
+                                                <label for="inputManager" class="form-label">Lider da Equipe</label>
+                                                <input type="text" class="form-control" id="inputManager">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputSchedule" class="form-label">Turno</label>
+                                                <select class="form-select">
+                                                    <option value="1">Manhã</option>
+                                                    <option value="1">Tarde</option>
+                                                    <option value="2">Noite</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputTag" class="form-label">TAG</label>
+                                                <input type="text" class="form-control" id="inputTag"
+                                                    aria-describedby="emailHelp">
+                                            </div>
+
+
+                                        </div>
+                                        <div class="container d-flex flex-column">
+
+                                            <label for="inputEmailMember" class="form-label ">Digite o email do
+                                                Membro</label>
+                                            <div class="form-outline mb-3 btn-group">
+                                                <input type="email" minlength="5" class="form-control"
+                                                    id="inputEmailMember" />
+                                                <button type="button" class="btn btn-primary" id="btnAdd"
+                                                    onclick="addUserInList()">Adicionar</button>
+                                            </div>
+                                            <label for="exampleInputPassword1" class="form-label">Membros
+                                                Adicionados</label>
+                                            <ul id="listMembers"
+                                                style="border: 1px solid #adb5bd; border-radius: 5px;max-height: 130px; list-style-type: none; overflow-y: scroll; height: 100%;">
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cadastrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </main>
-  
 
-    <!--SCRIPT-->        
-    <script >
-        
-        function getCurrentUser(){
-            var user =  JSON.parse(localStorage.getItem("currentUser"))
+     <!-- PROFILE MODAL-->
+     <div class="modal" tabindex="-1" id="profileModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="profileIdentifier" class="form-label">Identificação</label>
+                            <input type="text" disabled class="form-control" id="profileIdentifier"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileName" class="form-label">Nome Completo</label>
+                            <input type="text" disabled class="form-control" id="profileName"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileMail" class="form-label">Email</label>
+                            <input type="text" disabled class="form-control" id="profileMail"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <button type="button" data-bs-target="#emailSuccessModal" data-bs-toggle="modal"
+                            class="btn btn-warning">Solicitar Nova Senha</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SCRIPT-->
+    <script>
+
+        function getCurrentUser() {
+            var user = JSON.parse(localStorage.getItem("currentUser"))
             var component = document.getElementById('currentUser');
-  
+
             component.innerHTML = user.firstName + " " + user.lastName;
-  
+
             let image = document.getElementById("profileImage");
             image.src = user.github;
+
+            
+            var profileIdentifier = document.getElementById("profileIdentifier");
+            var profileName = document.getElementById("profileName");
+            var profileMail = document.getElementById("profileMail");
+
+         
+            profileIdentifier.value = user.register;
+            profileName.value = user.firstName + " " + user.lastName;
+            profileMail.value = user.email;
         }
         getCurrentUser()
     </script>
     <script src="../../../src/scripts/teamController.js">
     </script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

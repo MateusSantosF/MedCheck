@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,15 @@
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Poppins:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>MedCheck - Acesso</title>
 </head>
+
 <body onload="getCurrentUser()">
 
     <header>
@@ -23,251 +28,335 @@
     <main>
         <div class="container-fluid">
             <div class="row flex-nowrap">
-                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 min-vh-100" style="background-color: var(--teal-600);">
-                    <a href="#" class="d-flex justify-content-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        
-                        <span id="logotipo" class="text-center fs-3 d-sm-inline text-center p-4"><span>MEDC</span>heck</span>
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 min-vh-100"
+                    style="background-color: var(--teal-600);">
+                    <a href="#"
+                        class="d-flex justify-content-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+                        <span id="logotipo"
+                            class="text-center fs-3 d-sm-inline text-center p-4"><span>MEDC</span>heck</span>
                     </a>
-                        <ul class="nav flex-column nav-pills p-2">
-                            <li class="nav-item">
-                                <a class="nav-link active fs-5 text-white" aria-current="page" href="#">Dashboard</a>
+                    <ul class="nav flex-column nav-pills p-2">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-5 text-white" aria-current="page" href="#">Dashboard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link  fs-5 text-white" href="./adminPages/patientManager.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./adminPages/protocolManager.html">Protocolos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5 text-white" aria-current="page"
+                                href="./adminPages/userManager.html">Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./adminPages/teamManager.html">Equipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./adminPages/drugManager.html">Medicamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white"
+                                href="./adminPages/exercisesManager.html">Exercícios</a>
+                        </li>
+                    </ul>
+                    <!-- PROFILE -->
+                    <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                          
+                            <li><a class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#profileModal">Perfil</a>
                             </li>
-                           
-                            <li class="nav-item">
-                                <a class="nav-link  fs-5 text-white" href="./adminPages/patientManager.html">Pacientes</a>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./adminPages/protocolManager.html">Protocolos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5 text-white" aria-current="page" href="./adminPages/userManager.html">Usuários</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./adminPages/teamManager.html">Equipes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./adminPages/drugManager.html">Medicamentos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5  text-white" href="./adminPages/exercisesManager.html">Exercícios</a>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitModal">Sair</a>
                             </li>
                         </ul>
-                        <!-- PROFILE -->
-                        <div class="dropdown pb-4 p-4" style="position: fixed; top:90%;">
-                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="" id="profileImage" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                                <span class="d-none d-sm-inline mx-1 fs-5" id="currentUser"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                                <li><a class="dropdown-item" href="#">Configurações</a></li>
-                                <li><a class="dropdown-item" >Perfil</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitModal">Sair</a></li>
-                            </ul>
-                        </div>
-                      
                     </div>
-            <div class="col-10 row p-5">
-        
-                <h2 class="fs-1 pb-4">Dashboard</h2>
-                <div class="d-flex flex-column col-9">
-                  
-                    <div class="d-flex flex-row justify-content-between gap-2">
-                        <div class="my-card">
-                            <div class="my-card-middle">
-                                <p class="text-muted">Entrada de Pacientes</p>
-                            </div>
-                            <div class="my-card-bottom">
-                                <p class="fs-4">460 / mês</p>
-                            </div>
-                        </div>   
-                        
-                        <div class="my-card">
-                            <div class="my-card-middle">
-                                <p class="text-muted">Medicamentos Solicitados</p>
-                            </div>
-                            <div class="my-card-bottom">
-                                <p class="fs-4">232 / mês</p>
-                            </div>
-                        </div>
-    
-                        <div class="my-card">
-                            <div class="my-card-middle">
-                                <p class="text-muted">Protocolos Gerados</p>
-                            </div>
-                            <div class="my-card-bottom">
-                                <p class="fs-4">630 / mês</p>
-                            </div>
-                        </div>
-    
-                        <div class="my-card">
-                            <div class="my-card-middle">
-                                <p class="text-muted">Funcionados de Folga</p>
-                            </div>
-                            <div class="my-card-bottom">
-                                <p class="fs-4">8 / hoje</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3 class="fs-3 text-muted p-4">Pacientes por dia</h3>
-                    <canvas id="barChart"></canvas>
-                </div>
-                <div class="d-flex flex-column col-3 card">
-                    <h3 class="fs-3 text-muted p-4 text-center">Gênero dos Pacientes</h3>
-                    <canvas id="pieChart"  ></canvas>
 
-                    <h3 class="fs-3 text-muted p-4 text-center">Membros por Equipe</h3>
-                    <canvas id="pieChart2"  ></canvas>
                 </div>
-                
-              
-            </div>
+                <div class="col-10 row p-5">
 
-            <!-- MODAL EXIT-->
-            <div class="modal" tabindex="-1" id="exitModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">MedCheck</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="fs-1 pb-4">Dashboard</h2>
+                    <div class="d-flex flex-column col-9">
+
+                        <div class="d-flex flex-row justify-content-between gap-2">
+                            <div class="my-card">
+                                <div class="my-card-middle">
+                                    <p class="text-muted">Entrada de Pacientes</p>
+                                </div>
+                                <div class="my-card-bottom">
+                                    <p class="fs-4">460 / mês</p>
+                                </div>
+                            </div>
+
+                            <div class="my-card">
+                                <div class="my-card-middle">
+                                    <p class="text-muted">Medicamentos Solicitados</p>
+                                </div>
+                                <div class="my-card-bottom">
+                                    <p class="fs-4">232 / mês</p>
+                                </div>
+                            </div>
+
+                            <div class="my-card">
+                                <div class="my-card-middle">
+                                    <p class="text-muted">Protocolos Gerados</p>
+                                </div>
+                                <div class="my-card-bottom">
+                                    <p class="fs-4">630 / mês</p>
+                                </div>
+                            </div>
+
+                            <div class="my-card">
+                                <div class="my-card-middle">
+                                    <p class="text-muted">Funcionados de Folga</p>
+                                </div>
+                                <div class="my-card-bottom">
+                                    <p class="fs-4">8 / hoje</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="fs-3 text-muted p-4">Pacientes por dia</h3>
+                        <canvas id="barChart"></canvas>
                     </div>
-                    <div class="modal-body">
-                      <p>Realmente deseja sair?</p>
+                    <div class="d-flex flex-column col-3 card">
+                        <h3 class="fs-3 text-muted p-4 text-center">Gênero dos Pacientes</h3>
+                        <canvas id="pieChart"></canvas>
+
+                        <h3 class="fs-3 text-muted p-4 text-center">Membros por Equipe</h3>
+                        <canvas id="pieChart2"></canvas>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="location.href='../../index.html'">Sair</button>
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    </div>
-                  </div>
+
+
                 </div>
             </div>
-              
-        </div>
     </main>
 
+     <!-- MODAL EXIT-->
+     <div class="modal" tabindex="-1" id="exitModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MedCheck</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Realmente deseja sair?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        onclick="location.href='../../index.html'">Sair</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EMAIL SUCESS-->
+    <div class="modal" tabindex="-1" id="emailSuccessModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MedCheck</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Confirmar solicitação de nova senha?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFILE MODAL-->
+    <div class="modal" tabindex="-1" id="profileModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="profileIdentifier" class="form-label">Identificação</label>
+                            <input type="text" disabled class="form-control" id="profileIdentifier"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileName" class="form-label">Nome Completo</label>
+                            <input type="text" disabled class="form-control" id="profileName"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="profileMail" class="form-label">Email</label>
+                            <input type="text" disabled class="form-control" id="profileMail"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <button type="button" data-bs-target="#emailSuccessModal" data-bs-toggle="modal"
+                            class="btn btn-warning">Solicitar Nova Senha</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 
     <script>
 
-            const ctx = document.getElementById('barChart').getContext('2d');
-            const ctxPieChart = document.getElementById('pieChart').getContext('2d');
-            const ctxPieChart2 = document.getElementById('pieChart2').getContext('2d');
+        const ctx = document.getElementById('barChart').getContext('2d');
+        const ctxPieChart = document.getElementById('pieChart').getContext('2d');
+        const ctxPieChart2 = document.getElementById('pieChart2').getContext('2d');
 
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['01/06/2022', '02/06/2022', '03/06/2022', '04/06/2022', '05/06/2022', '06/06/2022','07/06/2022',
-                             '08/06/2022', '09/06/2022', '10/06/2022', '11/06/2022', '12/06/2022', '13/06/2022','14/06/2022',
-                             '15/06/2022', '16/06/2022', '17/06/2022', '18/06/2022', '19/06/2022', '20/06/2022','21/06/2022',
-                             '22/06/2022', '23/06/2022', '24/06/2022', '25/06/2022', '26/06/2022', '27/06/2022','28/06/2022',
-                             '29/06/2022', '30/06/2022', '31/06/2022',
-                            ],
-                    datasets: [{
-                        label: 'Pacientes Por Dia',
-                        data: [10,41,81,1,40,80,95,70,0,55,96,52,47,6,11,12,45,40,27,31,42,43,17,13,30,27,13,10,15,
-                        	46,	36,16],
-                        backgroundColor: [
-                            'rgb(54, 162, 235,0.2)',
-   
-                        ],
-                        borderColor: [
-                            'rgb(54, 162, 235)',
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['01/06/2022', '02/06/2022', '03/06/2022', '04/06/2022', '05/06/2022', '06/06/2022', '07/06/2022',
+                    '08/06/2022', '09/06/2022', '10/06/2022', '11/06/2022', '12/06/2022', '13/06/2022', '14/06/2022',
+                    '15/06/2022', '16/06/2022', '17/06/2022', '18/06/2022', '19/06/2022', '20/06/2022', '21/06/2022',
+                    '22/06/2022', '23/06/2022', '24/06/2022', '25/06/2022', '26/06/2022', '27/06/2022', '28/06/2022',
+                    '29/06/2022', '30/06/2022', '31/06/2022',
+                ],
+                datasets: [{
+                    label: 'Pacientes Por Dia',
+                    data: [10, 41, 81, 1, 40, 80, 95, 70, 0, 55, 96, 52, 47, 6, 11, 12, 45, 40, 27, 31, 42, 43, 17, 13, 30, 27, 13, 10, 15,
+                        46, 36, 16],
+                    backgroundColor: [
+                        'rgb(54, 162, 235,0.2)',
 
-                        ],
-                        borderWidth: 1,
-                        barThickness: 25
-                    }]
+                    ],
+                    borderColor: [
+                        'rgb(54, 162, 235)',
+
+                    ],
+                    borderWidth: 1,
+                    barThickness: 25
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false,
+                plugins: {
+                    legend: {
+                        display: false,
 
-                        }
                     }
                 }
-            });
+            }
+        });
 
-            const myPieChart = new Chart(ctxPieChart, {
-                type: 'doughnut',
-                data:{
-                    labels: [
-                        'Feminino',
-                        'Masculino',
-                    ],
-                    datasets: [{
-                        label: 'Sexo Pacientes',
-                        data: [100,340],
-                        backgroundColor: [
+        const myPieChart = new Chart(ctxPieChart, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Feminino',
+                    'Masculino',
+                ],
+                datasets: [{
+                    label: 'Sexo Pacientes',
+                    data: [100, 340],
+                    backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
-                        ],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                
-                }
-            });
-
-            var teams = JSON.parse(localStorage.getItem("teams"))
-
-            teamsMembers = []
-            teams.forEach(team => {
-      
-                teamsMembers.push( team.members.length)
-            });
-            const myPieChart2 = new Chart(ctxPieChart2, {
-                type: 'pie',
-                data:{
-                    labels: [
-                        'E-UTI-1',
-                        'E-PS-1',
-                        'E-UTI-2',
-                        'E-NEO-1',
-                        'E-PS-2',
-                        'E-PS-3',
                     ],
-                    datasets: [{
-                        label: 'Sexo Pacientes',
-                        data: teamsMembers,
-                        backgroundColor: [
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+
+            }
+        });
+
+        var teams = JSON.parse(localStorage.getItem("teams"))
+
+        teamsMembers = []
+        teams.forEach(team => {
+
+            teamsMembers.push(team.members.length)
+        });
+        const myPieChart2 = new Chart(ctxPieChart2, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'E-UTI-1',
+                    'E-PS-1',
+                    'E-UTI-2',
+                    'E-NEO-1',
+                    'E-PS-2',
+                    'E-PS-3',
+                ],
+                datasets: [{
+                    label: 'Sexo Pacientes',
+                    data: teamsMembers,
+                    backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
                         'rgb(255, 205, 86)',
                         'rgb(255, 205, 160)',
-                        ],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                
-                }
-            });
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+
+            }
+        });
     </script>
-     <!--SCRIPT-->        
-     <script >
-        
-        function getCurrentUser(){
-            var user =  JSON.parse(localStorage.getItem("currentUser"))
+    <!--SCRIPT-->
+    <script>
+
+        function getCurrentUser() {
+            var user = JSON.parse(localStorage.getItem("currentUser"))
             var component = document.getElementById('currentUser');
-  
+
             component.innerHTML = user.firstName + " " + user.lastName;
 
             let image = document.getElementById("profileImage");
             image.src = user.github;
+
+            
+            var profileIdentifier = document.getElementById("profileIdentifier");
+            var profileName = document.getElementById("profileName");
+            var profileMail = document.getElementById("profileMail");
+
+         
+            profileIdentifier.value = user.register;
+            profileName.value = user.firstName + " " + user.lastName;
+            profileMail.value = user.email;
         }
         getCurrentUser()
     </script>
 </body>
+
 </html>
