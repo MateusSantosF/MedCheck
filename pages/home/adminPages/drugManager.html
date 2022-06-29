@@ -82,10 +82,8 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <div class="col page-functions">
-
 
                     <section class="top-functions">
                         <h1 class="ps-5 text-muted">Gerenciamento de Medicamentos</h1>
@@ -111,7 +109,6 @@
                                     data-bs-target="#request-modal">Solicitar Abastecimento</button>
                             </div>
                         </div>
-
 
                         <div class="container overflow-scroll" style="max-height:500px;">
                             <table class="table" id="drugsTable">
@@ -159,7 +156,7 @@
                 </div>
 
                 <!-- MODAL REGISTER DRUG-->
-                <div class="modal fade bd-example-modal-xl" id="drug-modal" tabindex="-1" aria-hidden="true">
+                <div class="modal fade" id="drug-modal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
 
                         <div class="modal-content">
@@ -199,7 +196,6 @@
 
                     </div>
                 </div>
-
     </main>
 
 
@@ -257,7 +253,6 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-
                     <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Fechar</button>
                 </div>
             </div>
@@ -272,19 +267,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Realmente deseja excluir este medicamento??</p>
+                    <p>Realmente deseja excluir este medicamento?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger">Excluir</button>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade bd-example-modal-xl" id="request-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="request-modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl">
-
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="ps-3">Solicitar Abastecimento</h3>
@@ -318,8 +311,6 @@
                                     <label for="urgency" class="form-label">Urgência</label>
                                     <input type="text" class="form-control" id="urgency" aria-describedby="emailHelp">
                                 </div>
-
-
                                 <div class="mb-3">
                                     <label for="patientRequester" class="form-label">Paciente Necessitado</label>
                                     <input type="text" class="form-control" id="patientRequester">
@@ -330,12 +321,10 @@
 
                 </div>
                 <div class="modal-footer">
-
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cadastro</button>
                 </div>
             </div>
-
         </div>
         <!--SCRIPT-->
         <script>

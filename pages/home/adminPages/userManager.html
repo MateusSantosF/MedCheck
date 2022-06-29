@@ -71,7 +71,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                             <li><a class="dropdown-item" data-bs-toggle="modal"
-                                data-bs-target="#profileModal">Perfil</a>
+                                    data-bs-target="#profileModal">Perfil</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -186,9 +186,12 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                                <label for="password1" class="form-label">Senha</label>
+                                                <input type="password" disabled class="form-control"
+                                                    id="password1">
                                             </div>
+
+                                            <button type="button" class="btn btn-warning">Gerar senha</button>
                                         </div>
 
                                         <div class="container d-flex flex-column">
@@ -213,10 +216,13 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="exampleInputPassword1" class="form-label">Confirmar
+                                                <label for="password2" class="form-label">Confirmar
                                                     Senha</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                                <input type="password" disabled class="form-control"
+                                                    id="password2">
                                             </div>
+
+
 
                                         </div>
 
@@ -307,12 +313,12 @@
             let image = document.getElementById("profileImage");
             image.src = user.github;
 
-            
+
             var profileIdentifier = document.getElementById("profileIdentifier");
             var profileName = document.getElementById("profileName");
             var profileMail = document.getElementById("profileMail");
 
-         
+
             profileIdentifier.value = user.register;
             profileName.value = user.firstName + " " + user.lastName;
             profileMail.value = user.email;
