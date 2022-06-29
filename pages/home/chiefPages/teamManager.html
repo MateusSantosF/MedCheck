@@ -164,7 +164,7 @@
                                         <div class="container d-flex flex-column">
                                             <div class="mb-3">
                                                 <label for="inputManager" class="form-label">Lider da Equipe</label>
-                                                <input type="text" class="form-control" id="inputManager">
+                                                <input type="text" disabled class="form-control" id="inputManagerRegister">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="inputSchedule" class="form-label">Turno</label>
@@ -404,8 +404,21 @@
 
             component.innerHTML = user.firstName + " " + user.lastName;
 
+           
+
             let image = document.getElementById("profileImage");
             image.src = user.github;
+
+            var profileIdentifier = document.getElementById("profileIdentifier");
+            var profileName = document.getElementById("profileName");
+            var profileMail = document.getElementById("profileMail");
+
+            inputManagerRegister = document.getElementById("inputManagerRegister");
+            inputManagerRegister.value = user.firstName + " " + user.lastName;
+
+            profileIdentifier.value = user.register;
+            profileName.value = user.firstName + " " + user.lastName;
+            profileMail.value = user.email;
         }
         getCurrentUser()
     </script>

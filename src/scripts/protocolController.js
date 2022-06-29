@@ -1,6 +1,3 @@
-$("#myModal").on("shown.bs.modal", function () {
-  $("#myInput").trigger("focus");
-});
 
 function listAllProtocols() {
   var table = document.getElementById("protocolTable");
@@ -40,7 +37,7 @@ function listAllProtocols() {
     buttons.innerHTML =
       "<div class='btn-group gap-2' role='group' aria-label='Basic example'> " +
       `<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
-                            data-bs-target="#protocolModal" >+Protocolo</button>` +
+                            data-bs-target="#protocolModal">+Protocolo</button>` +
       `<button type='button' class='btn btn-success' data-bs-toggle="modal" data-bs-target="#detailsModal">Detalhes</button>`+
       "</div>";
   });
