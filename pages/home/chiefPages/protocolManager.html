@@ -38,19 +38,22 @@
 					</a>
 					<ul class="nav flex-column nav-pills p-2">
 						<li class="nav-item">
-							<a class="nav-link fs-5 text-white" aria-current="page"
-								href="../homeUser.html">Dashboard</a>
-						</li>
+                            <a class="nav-link  fs-5 text-white" aria-current="page" href="../homeChief.html">Dashboard</a>
+                        </li>
 
-						<li class="nav-item">
-							<a class="nav-link active fs-5 text-white" href="#">Protocolos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link fs-5  text-white" href="./patientManager.html">Pacientes</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link  fs-5 text-white" aria-current="page" href="./hoursManager.html">Apontamentos</a>
-						</li>
+                        <li class="nav-item">
+                            <a class="nav-link  fs-5 text-white" href="./patientManager.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  active text-white" href="#">Protocolos</a>
+                        </li>
+                   
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./teamManager.html">Equipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-5  text-white" href="./hoursManager.html">Apontamentos</a>
+                        </li>
 
 					</ul>
 					<!-- PROFILE -->
@@ -162,6 +165,11 @@
 						<button class="nav-link" id="contact-tab" data-bs-toggle="tab"
 							data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
 							aria-selected="false">Alta / Óbito</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+							data-bs-target="#evolution-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+							aria-selected="false">Evolução</button>
 					</li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
@@ -677,6 +685,206 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="tab-pane fade show active" id="evolution-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+						tabindex="0">
+
+						<div class="container pt-4">
+							<div class="accordion" id="accordionExample">
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOne">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+											aria-controls="collapseOne">
+											Informações Gerais
+										</button>
+									</h2>
+									<div id="collapseOne" class="accordion-collapse collapse"
+										aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-secondary">Data e Hora</span></h4>
+											<h4><span class="badge bg-secondary">Hora</span></h4>
+											<h4><span class="badge bg-secondary">Data</span></h4>
+											<h4><span class="badge bg-secondary">Nome Paciente</span></h4>
+											<h4><span class="badge bg-warning">Freq. Cardíaca {}</span></h4>
+											<h4><span class="badge bg-warning">Freq. Respiratória {}</span></h4>
+											<h4><span class="badge bg-warning">Pressão Arterial {}</span></h4>
+											<h4><span class="badge bg-warning">Temperatura {}</span></h4>
+											<h4><span class="badge bg-secondary">Relata que {}</span></h4>
+											<h4><span class="badge bg-secondary">Necessita{}</span></h4>
+											<h4><span class="badge bg-secondary">Possui{}</span></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingTwo">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+											aria-expanded="false" aria-controls="collapseTwo">
+											Condições de Chegada
+										</button>
+									</h2>
+									<div id="collapseTwo" class="accordion-collapse collapse"
+										aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-success">Deambulando</span></h4>
+											<h4><span class="badge bg-danger">Maca</span></h4>
+											<h4><span class="badge bg-warning">Cadeira de Rodas</span></h4>
+											<h4><span class="badge bg-success">Andando</span></h4>
+											<h4><span class="badge bg-warning">Acordado e Agitado</span></h4>
+											<h4><span class="badge bg-success">Acordado e Colaborativo</span></h4>
+											<h4><span class="badge bg-danger">Dormindo despertável c/ estilmulos</span>
+											</h4>
+											<h4><span class="badge bg-danger">Desacordado</span></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingThree">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseThree"
+											aria-expanded="false" aria-controls="collapseThree">
+											Condições de Higiene
+										</button>
+									</h2>
+									<div id="collapseThree" class="accordion-collapse collapse"
+										aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-warning">Oral</span></h4>
+											<h4><span class="badge bg-secondary">Cabelo ou Couro Cabuludo</span></h4>
+											<h4><span class="badge bg-warning">Corporal</span></h4>
+											<h4><span class="badge bg-secondary">Banho</span></h4>
+											<h4><span class="badge bg-warning">Regular</span></h4>
+											<h4><span class="badge bg-danger">Sujo</span></h4>
+											<h4><span class="badge bg-success">Limpo</span></h4>
+											<h4><span class="badge bg-secondary">Comadre/Papagaio</span></h4>
+											<h4><span class="badge bg-warning">Limpeza de Unidade</span></h4>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFour">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFour"
+											aria-expanded="false" aria-controls="collapseFour">
+											Lesões e Localizações
+										</button>
+									</h2>
+									<div id="collapseFour" class="accordion-collapse collapse"
+										aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-danger">Grave</span></h4>
+											<h4><span class="badge bg-warning">Regular</span></h4>
+											<h4><span class="badge bg-success">Normal</span></h4>
+											<h4><span class="badge bg-primary">Descrever Nome{}</span></h4>
+											<h4><span class="badge bg-primary">Descrever Local{}</span></h4>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="accordion pt-3" id="accordion2">
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingFive">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseFive"
+											aria-expanded="false" aria-controls="collapseFive">
+											Deficiências
+										</button>
+									</h2>
+									<div id="collapseFive" class="accordion-collapse collapse"
+										aria-labelledby="headingFive" data-bs-parent="#accordion2">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-success">Não Possui</span></h4>
+											<h4><span class="badge bg-warning">Cognitiva</span></h4>
+											<h4><span class="badge bg-warning">Visual</span></h4>
+											<h4><span class="badge bg-warning">Motora</span></h4>
+											<h4><span class="badge bg-warning">Auditiva</span></h4>
+											<h4><span class="badge bg-warning">Funcional</span></h4>
+
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingSix">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseSix"
+											aria-expanded="false" aria-controls="collapseSix">
+											Próteses e Órteses
+										</button>
+									</h2>
+									<div id="collapseSix" class="accordion-collapse collapse"
+										aria-labelledby="headingSix" data-bs-parent="#accordion2">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-success">Não Possui</span></h4>
+											<h4><span class="badge bg-primary">Descrever{}</span></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingSeven">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+											aria-expanded="false" aria-controls="collapseSeven">
+											Procedimentos / Cuidados
+										</button>
+									</h2>
+									<div id="collapseSeven" class="accordion-collapse collapse"
+										aria-labelledby="headingSeven" data-bs-parent="#accordion2">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-black">Descrever {}</span></h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="headingEight">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#collapseEight"
+											aria-expanded="false" aria-controls="collapseEight">
+											Queixas
+										</button>
+									</h2>
+									<div id="collapseEight" class="accordion-collapse collapse"
+										aria-labelledby="headingEight" data-bs-parent="#accordion2">
+										<!-- Acordion Body-->
+										<div class="accordion-body">
+											<h4><span class="badge bg-warning">Dor de Cabeça</span></h4>
+											<h4><span class="badge bg-warning">Cansaço</span></h4>
+											<h4><span class="badge bg-warning">Dor nos Olhos</span></h4>
+											<h4><span class="badge bg-warning">Fome</span></h4>
+											<h4><span class="badge bg-warning">Sudorese</span></h4>
+											<h4><span class="badge bg-warning">Frio</span></h4>
+											<h4><span class="badge bg-warning">Tremores</span></h4>
+											<h4><span class="badge bg-warning">Náusea</span></h4>
+											<h4><span class="badge bg-warning">Boca Seca</span></h4>
+											<h4><span class="badge bg-primary">Outra</span></h4>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					
 
 				</div>
 

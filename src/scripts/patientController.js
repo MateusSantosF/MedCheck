@@ -33,22 +33,22 @@ function ListAllPatients(){
         }
      
 
-        if(currentUser.permission == "employee"){
+        if(currentUser.permission == "employee" || currentUser.permission =="chief"){
             var enterData = row.insertCell();
             enterData.innerHTML = patient.cadastreDate
         }
 
-        if(currentUser.permission == "employee"){
+        if(currentUser.permission == "employee" || currentUser.permission =="chief" ){
             var sector = row.insertCell();
             sector.innerHTML = patient.sector
         }
 
-        if(currentUser.permission == "admin"){
+        if(currentUser.permission == "admin"|| currentUser.permission =="chief" ){
             var healthPlan = row.insertCell();
             healthPlan.innerHTML = patient.healthPlan
         }
 
-        if(currentUser.permission == "admin"){
+        if(currentUser.permission == "admin" || currentUser.permission =="chief" ){
             var cardNumber = row.insertCell();
             cardNumber.innerHTML = patient.cardNumber
         }
